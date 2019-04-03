@@ -1,9 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
-	"bufio"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 	for scanner.Scan() {
 		line := scanner.Text()
 		if _, ok := seen[line]; !ok {
-			fmt.Print(line)
+			fmt.Println(line)
 			seen[line] = struct{}{}
 		}
 	}
